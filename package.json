@@ -1,0 +1,26 @@
+{
+  "name": "@viewdoc/markup-demo",
+  "version": "0.1.0",
+  "description": "A tool to create demo files for markup syntax",
+  "repository": "https://github.com/viewdoc/markup-demo",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "rimraf lib",
+    "build": "tsc",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "fs-extra": "7.0.1",
+    "walk": "2.3.14"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "5.0.5",
+    "@types/walk": "2.3.0",
+    "rimraf": "^2.6.3",
+    "typescript": "3.4.5"
+  }
+}
