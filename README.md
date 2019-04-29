@@ -1,4 +1,5 @@
 # @viewdoc/markup-demo
+
 > A tool to create demo files for markup syntax
 
 It turns this:
@@ -14,7 +15,7 @@ It turns this:
 into this:
 
 ````
-```markdown
+```
 > This is an example.
 ```
 
@@ -29,7 +30,7 @@ $ npm install @viewdoc/markup-demo
 
 ## Usage
 
-```
+```javascript
 const { buildMarkup } = require('@viewdoc/markup-demo')
 const path = require('path')
 
@@ -40,9 +41,9 @@ const main = async () => {
     srcExtensions: ['.md'],
     generateSrc: (markup) => {
       return [
-        '```markdown',
+        '````',
         markup,
-        '```',
+        '````',
       ].join('')
     }
   })
